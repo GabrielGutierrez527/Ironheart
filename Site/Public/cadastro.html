@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironheart | Cadastro</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="icon" href="logo/Ironheart (logo).png">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav-container" id="nav">
+
+            <img class="logo" src="logo/Ironheart (white logo without ribbon at the side of the shield).png" alt="">
+
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html">Home
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="curiosidades.html">Curiosidades
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cavaleirosrenomados.html">Cavaleiros Renomados
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="armaduras.html">Armaduras
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="armamentos.html">Armamentos
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <span style="color: white;">|</span>
+                </li>
+
+                <li>
+                    <a href="login.html">Login
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cadastro.html">Cadastro
+                        <div class="barra"></div>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="cadastro">
+        <div class="containerCadastro">
+
+            <div class="form">
+                <form action="#">
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                    </div>
+                    <!-- Área de inputs das informações para cadastro -->
+                    <div class="group-inputs">
+                        <div>
+
+                            <div class="form-input">
+
+                                <input type="text" id="idUsuario_input" placeholder="Nome de Usuário">
+
+                            </div>
+
+                            <div class="form-input">
+
+                                <input type="text" id="email_input" placeholder="Digite seu E-Mail">
+                            </div>
+
+                            <div class="form-input">
+
+                                <input type="password" id="senha_input" placeholder="Senha">
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <div class="form-input">
+                                <p id="title-input">Selecione sua arma medieval favorita:</p>
+                                <select name="Arma Medieval Favorita" id="armaFavorita">
+                                    <option value="1">Espada Curta</option>
+                                    <option value="2">Espada Longa</option>
+                                    <option value="3">Espada Grande</option>
+                                    <option value="4">Machado</option>
+                                    <option value="5">Alabarda</option>
+                                    <option value="6">Maça/Martelo</option>
+                                    <option value="7">Lança</option>
+                                </select>
+                            </div>
+
+                            <div class="form-input">
+                                <p id="title-input">Selecione seu estilo de armadura favorito:</p>
+                                <select name="Estilo de Armadura Favorito" id="armaduraFavorita">
+                                    <option value="1">Estilo Milanês</option>
+                                    <option value="2">Estilo Gótico</option>
+                                    <option value="3">Estilo Maximiliano</option>
+                                    <option value="4">Estilo Greenwich</option>
+                                </select>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <!-- Termos de política e privacidade, botão linkado com a área de usuário -->
+                    <div class="politicas-input">
+                        <input type="checkbox" id="privacidade" class="checkbox">
+                        <label for="privacidade" class="label-politica"><span style="color: white;">Eu li e estou de
+                                acordo com a</span> <a style="color: rgb(217, 177, 0)" ;
+                                href="politcs.html"><br>Política de Privacidade e Termos de Uso</a>
+                        </label>
+                    </div>
+
+                    <div>
+                        <button onclick="cadastrar()" class="register-button">Cadastrar</button>
+                    </div>
+                    <!-- <div class="alerta_erro">
+                        <div class="card_erro" id="cardErro">
+                            <span id="mensagem_erro"></span>
+                        </div>
+                    </div>
+                    <div id="div_aguardar" class="loading-div">
+                    </div>
+                    <div id="div_erros_login"></div> -->
+            </div>
+            </form>
+        </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var idUsuarioVar = idUsuario_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var armaVar = armaFavorita.value;
+        var armaduraVar = armaduraFavorita.value;
+
+        if (idUsuarioVar == "" || emailVar == "" || senhaVar == "" || armaVar == "" || armaduraVar == "") {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            alert("Preencha todos os campos!")
+            finalizarAguardar();
+            return false;
+        }
+        // else {
+        //     setInterval(sumirMensagem, 5000)
+        // }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                idUsuarioServer: idUsuarioVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                armaServer: armaVar,
+                armaduraServer: armaduraVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setInterval(() => {
+                    window.location = "./login.html";
+                },
+                1000
+                )
+                
+
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>

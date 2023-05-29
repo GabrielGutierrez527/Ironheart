@@ -1,0 +1,211 @@
+@import url(fonts/PrinceValiant.ttf);
+
+* {
+    cursor: url(cursors/UO\ -\ Gauntlet.cur), default;
+    font-family: 'Prince Valiant';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(img-background/bg7.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* NAV BAR */
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.barra {
+    background-color: #000000;
+    width: 0%;
+    height: 2px;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
+}
+
+a:hover .barra {
+    background-color: #d9b100;
+    width: 100%;
+    height: 2px;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.logo {
+    width: 13vw;
+    height: 14vh;
+    right: 50vw;
+}
+
+.nav-container {
+    height: 14vh;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 1px;
+    margin-left: 30px;
+}
+
+/* CSS ÁREA DE CADASTRO */
+
+#cadastro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.containerCadastro {
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 72vh;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.form {
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    padding: 5px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.title h1 {
+    display: flex;
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.group-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.form-input {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+#title-input {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.group-inputs input {
+    padding: 10px 5px;
+    border: none;
+    color: black;
+    background-color: #ffffff;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease;
+    text-indent: -200%;
+    opacity: 1;
+}
+
+[placeholder]:hover::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #000000;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.politicas-input {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 3vh;
+}
+
+.politicas-input .checkbox {
+    margin-right: 15px;
+}
+
+.politicas-input .label-politica a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 0;
+    border-radius: 30px;
+}
+
+.register-button a {
+    display: flex;
+    justify-content: center;
+}
+
+.register-button {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-size: 24px;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 20px;
+    position: relative;
+    top: 7vh;
+}
+
+.register-button:hover {
+    background-color: #d9b100;
+    color: #000000;
+    transition: .7s ease;
+}
+
+
+.alerta_erro {
+    color: black;
+    background-color: white;
+    font-size: 15px;
+}

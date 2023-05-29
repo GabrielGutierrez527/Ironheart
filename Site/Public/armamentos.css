@@ -1,0 +1,231 @@
+@import url(fonts/PrinceValiant.ttf);
+
+* {
+    cursor: url(cursors/UO\ -\ Gauntlet.cur), auto;
+    font-family: 'Prince Valiant';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(img-background/bg7.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* NAV BAR */
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.barra {
+    background-color: #000000;
+    width: 0%;
+    height: 2px;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
+}
+
+a:hover .barra {
+    background-color: #d9b100;
+    width: 100%;
+    height: 2px;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.logo {
+    width: 13vw;
+    height: 14vh;
+    right: 50vw;
+}
+
+.nav-container {
+    height: 14vh;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 1px;
+    margin-left: 30px;
+}
+
+/* CONTEÚDO */
+
+#armamentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+main .container {
+    display: flex;
+    width: 65vw;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+}
+
+.content {
+    display: block;
+}
+
+#paragraphTitle {
+    color: #d9b100;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+#paragraphSubtitle {
+    color: #d9b100;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+#paragraph {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin: 15px;
+}
+
+#destaque {
+    color: red;
+    font-size: 30px;
+}
+
+#destaque2 {
+    color: #d9b100;
+    font-size: 30px;
+}
+
+#espadaCurta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#espadaLonga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#espadaGrande {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#machado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#alabarda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#maçaMartelo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#lanca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgArma {
+    display: block;
+    margin: 5px;
+}
+
+.arma1 {
+    width: 21vw;
+    height: 20vh;
+    border-radius: 7px;
+}
+
+.arma2 {
+    width: 21vw;
+    height: 20vh;
+    border-radius: 7px;
+}
+
+.arma3 {
+    width: 21vw;
+    height: 25vh;
+    border-radius: 7px;
+}
+
+.arma4 {
+    width: 21vw;
+    height: 27vh;
+    border-radius: 7px;
+}
+
+.arma5 {
+    width: 21vw;
+    height: 27vh;
+    border-radius: 7px;
+}
+
+.arma6 {
+    width: 21vw;
+    height: 27vh;
+    border-radius: 7px;
+}
+
+.arma7 {
+    width: 31vw;
+    height: 20vh;
+    border-radius: 7px;
+}
+
+#metricaArmas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#armaBarra {
+    position: relative;
+    width: 850px;
+    height: 700px;
+    margin-bottom: 20px;
+}
+
+.grafico {
+    display: block;
+}

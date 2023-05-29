@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironheart | Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="logo/Ironheart (logo).png" </head>
+
+<body>
+
+    <header>
+
+        <nav class="nav-container" id="nav">
+
+            <img class="logo" src="logo/Ironheart (white logo without ribbon at the side of the shield).png">
+            <ul class="nav-list">
+
+                <li>
+                    <a href="index.html">Home
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="curiosidades.html">Curiosidades
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cavaleirosrenomados.html">Cavaleiros Renomados
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="armaduras.html">Armaduras
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="armamentos.html">Armamentos
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <span style="color: white;">|</span>
+                </li>
+
+                <li>
+                    <a href="login.html">Login
+                        <div class="barra"></div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="cadastro.html">Cadastro
+                        <div class="barra"></div>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="home">
+
+        <div class="container">
+
+            <div class="content">
+
+                <p id="paragraphTitle">HOME</p>
+
+                <p id="paragraphContext">Cavaleiros eram soldados com origem na nobreza medieval que se dirigiam a
+                    batalha em causa própria ou a serviço de monarcas, outros senhores feudais ou até mesmo ordens
+                    monásticas. <br> <br>
+                    Um jovem nobre só poderia se tornar um cavaleiro após servir como pajem ou escudeiro de
+                    algum outro cavaleiro ou senhor feudal. Durante a sua cerimônia de investidura, o aspirante á
+                    cavaleiro prestava vários juramentos; comprometendo-se a ser sempre corajoso, leal, cortês, e
+                    proteger os indefesos. <br> <br>
+                    Além de armas como espadas, lanças, machados e martelos, o aspecto mais distinguível de um cavaleiro
+                    era sua armadura; e na Europa, a construção delas atingiu o seu ápice no final do século XV e início
+                    do século XVI. As armaduras completas para o corpo inteiro requeriam mão de obra extremamente
+                    especializada. <br> <br>
+                    Com aço bem temperado, um traje de armadura completo pesava em torno de 25kg, e
+                    normalmente o cavaleiro necessitava da ajuda de seu escudeiro para vesti-la. Assim, adquirir essas
+                    armaduras era algo
+                    reservado apenas aos que podiam pagar, como os próprios cavaleiros e o resto da nobreza em geral.
+                </p>
+
+                <div class="carroselContainer">
+                    <div class="homeCarrossel">
+                        <div class="imgEsgrima" id="img">
+                            <img src="img-home/imghome1.png" class="imgSlide">
+                            <img src="img-home/imghome2.png" class="imgSlide">
+                            <img src="img-home/imghome4.png" class="imgSlide">
+                            <img src="img-home/imghome6.png" class="imgSlide">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
+
+<script>
+    var imgs = document.getElementById('img');
+    var img = document.querySelectorAll("#img img")
+
+    var slideContador = 0;
+
+    function slide() {
+        slideContador++;
+        if (slideContador > img.length - 1) {
+            slideContador = 0
+        }
+
+        imgs.style.transform = `translateX(${-slideContador * 500}px)`;
+    }
+
+    setInterval(slide, 1900);
+
+</script>
+
