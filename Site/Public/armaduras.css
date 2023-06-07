@@ -194,3 +194,22 @@ main .container {
 .grafico {
     display: block;
 }
+
+#galeriaArmadurasOrnamentadas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgArmaduraOrnamentada {
+    display: block;
+    margin: 5px;
+}
+
+.armaduraOrnamentada1 {
+    width: 18vw;
+    height: 57vh;
+    border-radius: 7px;
+    margin: 15px;
+}

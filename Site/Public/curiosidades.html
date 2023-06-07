@@ -89,13 +89,21 @@
                         provar seu valor mesmo em tempos de paz entre os vários reinos conflituosos da Europa. Mesmo que
                         originalmente as justas serviam como um exercício
                         militar, com o tempo se transformou em um esporte muito famoso, que é praticado até hoje em
-                        vários países. <br> O exemplo abaixo pertence ao mestre de
-                        artes marciais alemão <span id="destaque2">Paulo Hector Meyer</span> (1517 - 1579), e exibe dois
+                        vários países. <br> Os exemplos abaixo pertencem ao mestre de
+                        artes marciais alemão <span id="destaque2">Paulo Hector Meyer</span> (1517 - 1579), e exibem
+                        dois
                         cavaleiros em uma justa.
                     </p>
 
-                    <div class="gifs">
-                        <img class="imgTorneio" src="img-home/imghome8.png">
+                    <div class="carroselContainer">
+                        <div class="homeCarrossel">
+                            <div class="imgJusta" id="img">
+                                <img src="img-home/imghome8.png" class="imgSlide">
+                                <img src="img-home/imghome9.png" class="imgSlide">
+                                <img src="img-home/imghome10.png" class="imgSlide">
+                                <img src="img-home/imghome11.png" class="imgSlide">
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -295,10 +303,30 @@
 
 <script>
 
+    var imgs = document.getElementById('img');
+    var img = document.querySelectorAll("#img img")
+
+    var slideContador = 0;
+
+    function slide() {
+        slideContador++;
+        if (slideContador > img.length - 1) {
+            slideContador = 0
+        }
+
+        imgs.style.transform = `translateX(${-slideContador * 500}px)`;
+    }
+
+    setInterval(slide, 1900);
+
+</script>
+
+<script>
+
     function functionConversao() {
 
         var imgMilanesa = 'https://i.pinimg.com/564x/d5/a7/66/d5a76600837b69165e7cd7887a444b0b.jpg';
-        var imgGotica = 'https://i.pinimg.com/564x/7e/16/68/7e16685a025e0571fcfcc5a8f39eddab.jpg';
+        var imgGotica = 'https://i.pinimg.com/564x/7d/09/e7/7d09e7a51ca36395f30a52a21b0a461c.jpg';
 
         var euro = 1;
         var florin = euro * 122;

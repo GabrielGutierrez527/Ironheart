@@ -159,8 +159,32 @@ main .container {
     display: block;
 }
 
-.imgTorneio {
+/* .imgTorneio {
     width: 21vw;
+    border-radius: 7px;
+} */
+
+.carroselContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.homeCarrossel {
+    overflow: hidden;
+    width: 500px;
+}
+
+.imgJusta {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX();
+}
+
+.imgSlide {
+    object-fit: cover;
+    width: 500px;
     border-radius: 7px;
 }
 
