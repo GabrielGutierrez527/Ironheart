@@ -139,3 +139,33 @@ main .container {
     width: 500px;
     border-radius: 7px;
 }
+
+#aboutMe {
+    display: block;
+    width: 60vw;
+    margin-top: 40px;
+}
+
+.divImg {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutMeImg {
+    width: 15vw;
+    border-radius: 7px;
+    margin: 15px;
+}
+
+p.aboutMe {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    height: 45vh;
+    margin-left: 40px;
+}
+
+#destaque {
+    color: red;
+    font-size: 30px;
+}
